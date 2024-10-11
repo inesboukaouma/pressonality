@@ -1,3 +1,8 @@
+<script setup>
+  import ProductItem from '@/components/ProductItem.vue';
+  import { store } from '@/store/store';
+</script>
+
 <template>
   <div class="text-3xl flex flex-wrap mx-20 my-8 text-center justify-center lg:text-5xl lg:mt-14">
     <p>
@@ -5,7 +10,18 @@
       <span class="text-pink-900">press on nails</span>
     </p>
   </div>
-  <div class="flex flex-col md:flex-row gap-8 lg:gap-20 justify-center mt-14">
+  <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> -->
+  <div class="flex flex-col md:flex-row md:gap-20 md:ml-[5%] lg:gap-40 lg:ml-[25%]">
+    <ProductItem
+      v-for="product in store.products"
+      :key="product.id"
+      :id="product.id"
+      :name="product.name"
+      :price="product.price"
+      :imageUrl="product.imageUrl"
+    />
+  </div>
+  <!-- <div class="flex flex-col md:flex-row gap-8 lg:gap-20 justify-center mt-14">
     <div class="items-center flex flex-col mx-8">
       <img src="/public/XmasNails.webp" alt="" class="w-56 lg:w-64" />
       <button class="bg-pink-500 rounded-3xl py-2 px-8 mt-4">Shop</button>
@@ -21,7 +37,7 @@
       <button class="bg-pink-500 rounded-3xl py-2 px-8 mt-4 hover:opacity-45">Shop</button>
       <button onclick="addToCart(3)" class="bg-pink-500 rounded-3xl py-2 px-8 mt-4">Ajouter au panier</button>
     </div>
-  </div>
+  </div> -->
   <div class="bg-pink-400 py-20 mt-20 px-3">
     <p class="text-silver text-2xl mb-8">Les press on nails, qu'est-ce q​​ue c'est ?</p>
     <p>

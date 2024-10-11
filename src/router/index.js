@@ -22,6 +22,12 @@ const router = createRouter({
       component: () => import('../views/ShopView.vue'),
     },
     {
+      path: '/shop/:productId',
+      name: 'item details',
+      component: () => import('../views/ShopItemView.vue'),
+      props: true,
+    },
+    {
       path: '/custom-nails',
       name: 'custom nails',
       component: () => import('../views/CustomView.vue'),
@@ -40,6 +46,11 @@ const router = createRouter({
       path: '/faq',
       name: 'faq',
       component: () => import('../views/FAQView.vue'),
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: () => import('../views/CartView.vue'),
     },
   ],
 });
