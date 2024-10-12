@@ -21,9 +21,9 @@
 </script>
 
 <template>
-  <div>{{ product }}</div>
+  <!-- <div>{{ product }}</div>
   <div>Name</div>
   <div>BIG IMAGE</div>
   <div>price</div>
-  <input type="text" name="" id="" /> SIZE
+  <input type="text" name="" id="" /> SIZE -->
 </template>

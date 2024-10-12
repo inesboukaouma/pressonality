@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Lato', ...defaultTheme.fontFamily.sans],
+        tangerine: ['Tangerine'],
       },
       colors: {
         pink: {

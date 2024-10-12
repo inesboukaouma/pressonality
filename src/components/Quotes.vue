@@ -3,7 +3,7 @@
 
   const quoteData = ref(null);
   const loading = ref(false);
-
+  // fetches a random quote from a web API
   const fetchData = async () => {
     loading.value = true;
     try {
@@ -22,9 +22,9 @@
 </script>
 
 <template>
-  <div v-if="quoteData">
-    <div>{{ quoteData.quote }}</div>
-    <div>{{ quoteData.author }}</div>
+  <div v-if="quoteData" class="flex bg-pink-400 px-16 pt-8 rounded-xl md:mt-40 mt-20 font-tangerine text-5xl flex-col">
+    <div class="mb-16">{{ quoteData.quote }}</div>
+    <div class="mb-4 flex justify-end">{{ quoteData.author }}</div>
   </div>
 </template>
 

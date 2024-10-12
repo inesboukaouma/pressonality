@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <div class="cart-container p-4 bg-white shadow-md rounded-lg">
+  <div class="cart-container flex p-4 bg-white shadow-md flex-col rounded-lg min-h-[25vh]">
     <h2 class="text-2xl font-bold mb-4">Votre Panier</h2>
     <div v-if="store.cartItems.length === 0" class="text-gray-500">Votre panier est vide.</div>
     <ul v-else>

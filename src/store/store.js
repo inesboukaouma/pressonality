@@ -28,7 +28,7 @@ export const store = reactive({
     // console.log(`Produit ${product.id} ajouté au panier. Total: ${this.cartValue}`);
     saveCartToStorage(this.cartItems);
   },
-
+  // takes a productId and checks if the item is in the cart. If it is, it reduces the quantity by one or removes it
   removeFromCart(productId) {
     const index = this.cartItems.findIndex((item) => item.id === productId);
     if (index > -1) {
@@ -55,8 +55,9 @@ export const store = reactive({
       name: 'Strawberry',
       price: 65.99,
       imageUrl: '/public/strawberry.webp',
-      sizes: ['xs', 's'],
-      shape: ['almond', 'square'],
+      sizes: ['xs', 's', 'm', 'l'],
+      shape: ['almond', 'square', 'stiletto'],
+      length: ['s, m, l, xl'],
     },
     // ... more products
   ],
